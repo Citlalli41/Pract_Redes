@@ -1,0 +1,140 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #f9f9f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: #4db6ac;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+main {
+  display: flex;
+  flex: 1;
+}
+
+/* Lista vertical de productos */
+.grid {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+  padding: 20px;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* 🔥 IMÁGENES MÁS GRANDES */
+.imagenes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.imagenes img {
+  width: 48%;              
+  max-width: 320px;        
+  height: 220px;           
+  object-fit: cover;       
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+/* Títulos */
+.card h3 {
+  margin: 10px 0;
+  color: #4db6ac;
+  font-size: 20px;
+}
+
+/* Botones */
+button {
+  background: #4db6ac;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-weight: 500;
+}
+
+button:hover {
+  background: #357f78;
+  transform: scale(1.05);
+}
+
+/* Carrito */
+#carrito {
+  flex: 1;
+  background: #ffffff;
+  border-left: 2px solid #eaeaea;
+  padding: 20px;
+  box-shadow: -4px 0 10px rgba(0,0,0,0.05);
+}
+
+#carrito h2 {
+  color: #4db6ac;
+}
+
+#lista-carrito {
+  list-style: none;
+  padding: 0;
+}
+
+#lista-carrito li {
+  margin: 8px 0;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Botón eliminar */
+.eliminar {
+  background: #e57373;
+  border: none;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.eliminar:hover {
+  background: #c62828;
+}
+
+/* Inputs */
+#nombre, 
+#correo, 
+#codigoIngresado {
+  width: 95%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
